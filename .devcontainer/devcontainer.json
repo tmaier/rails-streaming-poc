@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.154.2/containers/docker-existing-dockerfile
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+  "name": "Librario App",
+  // https://github.com/rails/devcontainer
+  "image": "ghcr.io/rails/devcontainer/images/ruby:3.3.7",
+  "features": {
+    "ghcr.io/rails/devcontainer/features/sqlite3": {}
+  },
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {
+        "editor.formatOnSaveMode": "file",
+        "[ruby]": {
+          "editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
+          "editor.formatOnSave": true, // Format files automatically when saving
+          "editor.tabSize": 2, // Use 2 spaces for indentation
+          "editor.insertSpaces": true, // Use spaces and not tabs for indentantion
+          "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+          "editor.formatOnType": true // Enable formatting while typing
+        }
+      },
+      "extensions": [
+        "editorconfig.editorconfig",
+        "Shopify.ruby-lsp",
+        "streetsidesoftware.code-spell-checker",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  }
+}
