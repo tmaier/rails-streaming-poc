@@ -50,4 +50,4 @@ COPY --chown=rails:rails --from=build /rails /rails
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 EXPOSE 9292
-CMD ["./bin/rackup", "application.ru", '--host', '0.0.0.0', '--port', '9292']
+CMD ["./bin/rackup", "application.ru", "--host", "0.0.0.0", "--port", "9292"]
