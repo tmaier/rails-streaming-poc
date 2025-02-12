@@ -37,6 +37,7 @@ class App < Rails::Application
 
   routes.append do
     root to: 'stream#counter'
+    get 'healthz' => 'rails/health#show', as: :rails_health_check
   end
 end
 
